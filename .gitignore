@@ -1,2 +1,22 @@
-*.toml
-*.egg-info
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Data files (e.g., character data, runtime JSON)
+data/
+
+# Packaging
+*.egg-info/
+dist/
+build/
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Textual logs or caches
+*.log
+*.tmp

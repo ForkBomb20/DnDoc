@@ -1,0 +1,2 @@
+[console_scripts]
+dndoc = dndoc.__main__:main

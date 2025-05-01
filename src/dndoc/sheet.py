@@ -4,6 +4,7 @@ from textual.app import App, ComposeResult
 from textual.widgets import Footer, Header, TabbedContent, TabPane, Label
 from dndoc.character_name import CharacterName
 from dndoc.character_info import CharacterInfo
+from dndoc.hit_points import HealthInfo
 
 class CharacterSheet(App):
     """A Textual app to manage a D&D character sheet."""
@@ -16,20 +17,15 @@ class CharacterSheet(App):
             with TabPane("Stats"):
                 yield CharacterName()
                 yield CharacterInfo()
-                yield Label("Stats")
+                yield HealthInfo()
             with TabPane("Actions"):
                 yield CharacterName()
-                yield Label("Actions")
             with TabPane("Spells"):
                 yield CharacterName()
-                yield Label("Spells")
             with TabPane("Inventory"):
                 yield CharacterName()
-                yield Label("Inventory")
             with TabPane("Features"):
                 yield CharacterName()
-                yield Label("Features")
-        # yield CharacterName()
         yield Footer(id="footer")
     
 

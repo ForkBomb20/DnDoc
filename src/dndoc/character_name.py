@@ -13,9 +13,10 @@ class CharacterName(Container):
     CharacterName {
         border: round $primary;
         background: $background;
-        height: 5;
+        height: 7;
         min-width: 50;
-        color: $accent;
+        color: $secondary;
+        border-title-color: $accent;
     }
     #label {
         border-title-align: left;
@@ -26,7 +27,7 @@ class CharacterName(Container):
         """Create a child widgets for the app."""
         character_data = load_character()
         upper = character_data["name"].upper()
-        ascii_name = text2art(upper, font="straight")
+        ascii_name = text2art(upper, font="small")
         lbl = Label(ascii_name, id="label")
         lbl.border_title = "Character Name"
         yield lbl

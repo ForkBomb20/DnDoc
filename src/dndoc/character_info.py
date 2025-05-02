@@ -15,11 +15,12 @@ class CharacterInfo(Container):
         height: 7;
         min-width: 50;
         color: $foreground;
+        border-title-color: $accent;
     }
     .info_label {
         border-subtitle-align: center;
         border: solid $foreground;
-        color: $foreground;
+        color: $secondary;
         min-width: 25;
         text-align: center;
         margin: 1 1

@@ -5,6 +5,10 @@ from textual.widgets import Footer, Header, TabbedContent, TabPane, Label
 from dndoc.character_name import CharacterName
 from dndoc.character_info import CharacterInfo
 from dndoc.hit_points import HealthInfo
+from dndoc.ability_scores import AbilityScores
+from dndoc.saving_throws import SavingThrows
+from dndoc.skills import Skills
+from dndoc.performance import Performance
 
 class CharacterSheet(App):
     """A Textual app to manage a D&D character sheet."""
@@ -18,6 +22,10 @@ class CharacterSheet(App):
                 yield CharacterName()
                 yield CharacterInfo()
                 yield HealthInfo()
+                yield AbilityScores()
+                yield SavingThrows()
+                yield Skills()
+                yield Performance()
             with TabPane("Actions"):
                 yield CharacterName()
             with TabPane("Spells"):
